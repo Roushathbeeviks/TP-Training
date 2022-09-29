@@ -1,0 +1,56 @@
+{
+  "EmployeeList": [
+    {
+      "firstname": "Roushath",
+      "lastname": "beevi",
+      "age": "22",
+      "phone": "8135363738",
+      "id": 2
+    },
+    {
+      "firstname": "Anusree",
+      "lastname": "Harish",
+      "age": "21",
+      "phone": "2225262324",
+      "id": 3
+    },
+    {
+      "firstname": "Edwin",
+      "lastname": "Daji",
+      "age": "22",
+      "phone": "9898989898",
+      "id": 4
+    },
+    {
+      "firstname": "Afsa",
+      "lastname": "C E",
+      "age": "29",
+      "phone": "9898989898",
+      "id": 6
+    },
+    {
+      "firstname": "Riswana ",
+      "lastname": " E A",
+      "age": "22",
+      "phone": "2225262324",
+      "id": 7
+    },
+    {
+      "firstname": "Jithu",
+      "lastname": "joseph",
+      "age": "22",
+      "phone": "2225262324",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

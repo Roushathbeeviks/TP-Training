@@ -1,0 +1,32 @@
+<div class="card">
+   <div class="heading">
+    <h4>VIEW EMPLOYEE</h4>
+    <div class="icon">
+        <i class="bi bi-house-door" [routerLink]="['/home']"></i> 
+    </div>
+   </div>
+
+   <table class="table table-striped">
+    <tbody>
+
+        <tr> 
+          <td><label >FIRST NAME</label></td>
+           <td>{{ data.firstname}}</td> 
+        </tr>
+
+        <tr> 
+            <td><label >LAST NAME</label></td>
+            <td>{{ data.lastname}}</td>
+
+          <tr> 
+            <td><label >AGE</label></td>
+             <td>{{ data.age}}</td> 
+          </tr>
+
+          <tr> 
+            <td><label> PHONE NUMBER</label></td>
+            <td>{{ data.phone}}</td> 
+          </tr>
+   </table>
+
+</div>
