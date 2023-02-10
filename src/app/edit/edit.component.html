@@ -1,0 +1,32 @@
+
+<div class="card" >
+    <div class="card-header">
+        EDIT EMPLOYEE CARD
+      </div>
+    <form #empform="ngForm"(ngSubmit) = "onSubmit(empform)" class="form">
+        <div class="input-group mb-3">
+            <br>
+            <span class="input-group-text " >FIRST NAME</span>
+            <input type="text" placeholder="First name" required #fname="ngModel" name="fname" [(ngModel)]="data.firstname">
+            </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">LAST NAME</span>
+            <input type="text" placeholder="last name" required #lname="ngModel" name="lname" [(ngModel)]="data.lastname">
+        </div>
+
+        <div class="input-group mb-3 ">
+            <span class="input-group-text">AGE</span>
+            <input type="age" placeholder="age" name="age" required #age="ngModel"  [(ngModel)]="data.age">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">PHONE NUMBER</span>
+            <input type="" placeholder="phone" name="phone"  required #phone="ngModel" [(ngModel)]="data.phone" pattern="^[7-9][0-9]{9}$">
+        </div>
+
+        <div class="button">
+            <button  type="submit" class="btn btn-success " >SUBMIT</button>
+        </div>
+    </form>
+</div>
+

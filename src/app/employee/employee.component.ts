@@ -33,10 +33,11 @@ export class EmployeeComponent implements OnInit {
   navigate(){
     this.routes.navigate(['/create'])
   }
-  navigatetodelete(id:any){
-   
 
-    
+  navigatetodelete(id:any){
+   if(confirm("Are you sure  you want to delete"))
+   {
+      
      this.empservice.deleteEmployeesbyid(id).subscribe((res)=>
      {
       //  console.log(res)
@@ -44,6 +45,9 @@ export class EmployeeComponent implements OnInit {
       this.toast.success("Successfully deleted", "deleted")
       this.ngOnInit();
    })
+   }
+
+    
 
   }
   sort(header:string) {

@@ -3,21 +3,21 @@
     <div class="card-header">
         CREATE EMPLOYEE CARD
       </div>
-    <form #empform="ngForm"(ngSubmit) = "empform.valid&&onSubmit()">
+    <form #empform="ngForm" (ngSubmit) ="onSubmit(empform)">
         <div class="input-group mb-3">
             <br>
             <span class="input-group-text " >FIRST NAME</span>
-            <input type="text" placeholder="First name" required #fname="ngModel" name="fname" [(ngModel)]="data.firstname">
-            <!-- <label class="text-danger" *ngIf="empform.submitted" >first name required</label > -->
-                <div class="text-danger" *ngIf="fname.errors?.['required']">
+            <input type="text" placeholder="First name" required #fname="ngModel" name="fname" [(ngModel)]="data.firstname" pattern="[a-zA-Z][a-zA-Z ]+">
+          <!-- <label class="text-danger" *ngIf="empform.submitted" >first name required</label >  -->
+                <div class="text-danger ms-2" *ngIf= "fname.errors?.['required']">
                     First Name is required.
                   </div>
         </div>
 
         <div class="input-group mb-3">
             <span class="input-group-text">LAST NAME</span>
-            <input type="text" placeholder="last name" required #lname="ngModel" name="lname" [(ngModel)]="data.lastname">
-            <div class="text-danger" *ngIf="lname.errors?.['required']">
+            <input type="text" placeholder="last name" required #lname="ngModel" name="lname" [(ngModel)]="data.lastname" pattern="[a-zA-Z][a-zA-Z ]+">
+            <div class="text-danger ms-2" *ngIf="lname.errors?.['required']">
                 last Name is required.
               </div>
         </div>
@@ -36,9 +36,8 @@
         </div>
 
         <div class="button">
-            <button  type="button" class="btn btn-success " (click)="onSubmit()">SUBMIT</button>
+            <button  type="submit" class="btn btn-success" [disabled]="!empform.valid">SUBMIT</button>
         </div>
-        
     </form>
 </div>
 

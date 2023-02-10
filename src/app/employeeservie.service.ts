@@ -9,7 +9,7 @@ export class EmployeeservieService {
 
   constructor(private httpclient:HttpClient) { }
 
-   getEmployees(){
+  getEmployees(){
     return this.httpclient.get<any>('http://localhost:3000/EmployeeList')
   }
   postEmployees(data:any){
@@ -21,7 +21,7 @@ export class EmployeeservieService {
   editEmployeesbyid(id:any, data:any){
     return this.httpclient.put<any>(`http://localhost:3000/EmployeeList/${id}`, data);
   }
-   deleteEmployeesbyid(id:any){
+  deleteEmployeesbyid(id:any){
      return this.httpclient.delete<any>(`http://localhost:3000/EmployeeList/${id}`)
  }
   

@@ -1,5 +1,6 @@
 import { compileNgModule } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import {EmployeeservieService} from '../employeeservie.service'
@@ -37,12 +38,12 @@ export class CreateComponent implements OnInit {
   }
 
 
-  onSubmit(){
-
+  onSubmit( form:NgForm){
+    //check whether there is an id along with the url, if so moves to edit (if loop),if not move to create(else loop)
     if(this.id){
       this.empservice.editEmployeesbyid(this.id,this.data).subscribe((res:any)=>
       {
-         this.routes.navigate(['/home'])
+         this.routes.navigate(['/'])
         console.log(res)
       })
       
@@ -56,7 +57,8 @@ export class CreateComponent implements OnInit {
       console.log(res)
       if(this.data!=null)
       this.toast.success("succesfully added","success")
-      this.routes.navigate(['/home'])
+      this.routes.navigate(['/'])
+     
       
       
   })
